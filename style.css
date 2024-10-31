@@ -1,0 +1,671 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 22px;
+    font-family: 'Lora', serif;
+    color: #31302C;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+
+/* -------------------------------- MENU --------------------------------*/
+.index-entete {
+    height: 945px;
+    text-align: center;
+    background-image: url(images/chaletindex1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+
+header nav {
+    position: sticky; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+   /* height: 945px;
+    background-color: rgba(0, 0, 0, 0.20);*/
+    height: 80px;
+    background-color: #31302cc9;
+}
+
+header nav li {
+    display: inline-block;
+    padding: 22px 60px 0 60px;
+}
+
+header nav li:hover {
+    background-color: #31302C;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lora', serif;
+    white-space: nowrap;
+}
+
+
+.menu-deroulant{
+    display: none;
+    background-color: #31302C;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+}
+
+li:hover .menu-deroulant{
+    display: block;
+}
+
+.menu-deroulant li{
+    float: none;
+    width: 60%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.menu-deroulant li a:hover{
+    color: #b5b5b5;
+}
+
+
+.button {
+    background-color: #31302cc9; 
+    color: white; 
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+    border-radius: 6px; 
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+.button:hover {
+    background-color: #31302C;
+}
+
+
+/* -------------------------------- INDEX CONTENT --------------------------------*/
+.wrapper {
+    padding: 50px;
+    text-align: center;
+    margin: 0px 40px 50px 40px;
+}
+
+
+.sur-titre {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: block;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #31302C;
+    font-size: 25px;
+    margin-top: 60px;
+}
+
+
+h1 {
+    text-align: center;
+    text-transform: none;
+    margin-top: -5px;
+    font-size: 70px;
+    letter-spacing: 3px;
+}
+
+
+h1 span {
+    display: block;
+    color: #214754;
+    font: normal 45px/45px "Monotype Corsiva";
+    letter-spacing: 5px;
+    margin-top: 0;
+}
+
+.presentation {
+    font-size: 20px;
+    padding: 50px 350px 50px 350px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-top: 50px;
+}
+
+strong {
+    color: #214754;
+}
+
+#petit-logo {
+    margin-top: 65px;
+    margin-bottom: 75px;
+}
+
+
+.wrapper article {
+    margin-bottom: 50px;
+}
+
+.button2 {
+    background-color: #31302C;
+    color: white; 
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+    border-radius: 6px; 
+    position: center;
+    padding: 12px;
+    font-family: 'Lora';
+}
+
+.button2:hover {
+    background-color: #31302cc9; 
+}
+
+/* -------------------------------- NOS SERVICES --------------------------------*/
+.flex-container {
+    padding: 0 60px;
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de revenir à la ligne */
+    justify-content: space-between;
+    gap: 20px; /* Espace entre les éléments */
+}
+
+.flex-container .item-site {
+    position: relative;
+    width: calc(35Opx - 200px); /* Chaque élément occupe un tiers de la largeur avec un espace de 20px */
+    overflow: hidden;
+    margin: 35px 0;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container .item-site img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* Effet de zoom au survol */
+}
+
+.flex-container .item-site:hover img {
+    transform: scale(1.05); /* Agrandissement de l'image au survol */
+}
+
+/* Style pour l'overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); /* Couleur semi-transparente */
+    opacity: 0; /* L'overlay est masqué par défaut */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.flex-container .item-site:hover .overlay {
+    opacity: 1; /* L'overlay devient visible au survol */
+}
+
+.overlay p {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+}
+
+/* -------------------------------- PAGE CONTACT --------------------------------*/
+.informations-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 85%;
+    height: 950px;
+    margin: 200px 0 0 150px;
+}
+
+.informations-contact aside {
+    text-align: justify;
+    margin-bottom: 50px;
+    margin-right: 40px;
+}
+
+.informations-contact h1 {
+    text-align: left;
+    margin-bottom: 25px;
+    color: #214754;
+}
+
+.informations-contact p, label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 35px;
+}
+
+.formulaire-contact {
+    text-align: justify;
+    margin-left: 50px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 6px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+#small {
+    font-size: 12px;
+}
+
+input[type="submit"] {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* -------------------------------- PAGE A PROPOS --------------------------------*/
+.apropos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 2050px;
+    margin: 100px 150px 0 200px;
+    text-align: justify;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1500px; 
+}
+
+.apropos p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    letter-spacing: 1px;
+    line-height: 30px;   
+    margin: 40px 75px 0 75px;
+}
+
+.apropos h1 {
+    color: #214754;
+    text-align: left;
+    margin: 60px 75px 0 75px;
+}
+
+.apropos img {
+    width: 600px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+
+hr {
+    margin-top: 45px;
+}
+
+.nous-joindre {
+    color: #214754;
+    margin-top: 20px;
+}
+
+.informations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.informations p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+}
+
+/* -------------------------------- FOOTER --------------------------------*/
+footer {
+    background-color: #31302C;
+    color: white;
+    text-align: center;
+    bottom: 0px;
+    width:100%;
+    height: 40px;
+}
+
+footer p {
+    height: 20px;
+    position: relative;
+    top : 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+
+
+/* -------------------------------- RESPONSIVE DESIGN --------------------------------*/
+@media screen and (max-width: 1850px) 
+{
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .presentation {
+        padding: 30px 250px 50px 250px;
+        margin-top: 30px;
+    }
+
+    #petit-logo {
+        margin-top: 55px;
+        margin-bottom: 60px;
+    }
+
+    .item-site {
+        margin: 0 20px 0 20px;
+    }
+
+    .apropos {
+        margin: 100px 0px 20px 60px;
+    }
+
+    .apropos div, .apropos p, .apropos h1 {
+        margin-left: 15px;
+        width: 580px;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 1450px) 
+{
+
+    header nav a {
+        font-size: 19px;
+    }
+
+    header nav li {
+        padding: 20px 50px 0 50px;
+    }
+
+    .presentation {
+        font-size: 20px;
+        padding: 30px 80px 50px 80px;
+    }
+
+    #petit-logo {
+        margin-top: 40px;
+        margin-bottom: 45px;
+    }
+    
+    .flex-container .item-site {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .informations-contact h1 {
+        font-size: 45px;
+    }
+
+    .informations-contact {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+        margin-top: 80px;
+        margin-left: 10%;
+    }
+
+    .informations-contact aside {
+        margin-bottom: -10px;
+    }
+
+    .paragraphe-contact {
+        width: 100%;
+    }
+
+    .formulaire-contact {
+        margin-left: 0px;
+        width: 90%;
+    }
+
+    .apropos {
+        margin:75px 0px 10px 20px;
+    }
+
+    aside img {
+        width: 450px;
+        margin-left: 0;
+    }
+   
+
+    .apropos article, .apropos p, .apropos h1 {
+        margin-left: 20px;
+        width: 550px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1000px) 
+{
+   
+    header nav {
+        height: 80px;
+        width: 100%;
+    }
+
+    header nav li {
+        padding: 20 0 20 0;
+        width: 100%;
+    }
+
+    header nav a {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .menu-deroulant li{
+        font-size: 16px;
+    }
+
+    .index-entete {
+        background-image: none;
+        height: 60px;
+    }
+
+    .button, .button2 {
+        display: none; 
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+  
+    .presentation {
+        font-size: 19px;
+        padding: 30px 80px 50px 80px;
+    }
+
+    #petit-logo {
+        margin-top: 30px;
+        margin-bottom: 35px;
+    }
+
+    .apropos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) 
+{
+    header {
+        text-align: center;
+    }
+
+    header nav li {
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+
+
+    .sur-titre {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h1 span {
+        font-size: 40px;
+    }
+
+    .presentation {
+        font-size: 18px;
+        padding: 10px 50px 0px 50px;
+    }
+
+    #petit-logo {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .informations-contact {
+        padding-bottom: 100px;
+    }
+
+    .informations-contact h1 {
+        font-size: 35px;
+    }
+   
+    .informations-contact p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    
+    header nav li a {
+        font-size: 13px;
+    }
+    .sur-titre {
+        margin-top: 10px;
+    }
+
+    .presentation {
+        font-size: 16px;
+        padding: 0px 0px 40px 0px;
+    }
+    
+    #petit-logo {
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    .formulaire-contact {
+        margin-top: 30px;
+    }
+
+    .informations-contact {
+        padding-bottom: 200px;
+    }
+
+    .informations-contact p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .apropos {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .apropos img {
+        width: 350px;
+        justify-content: space-between;
+        margin-left: 8%;
+        margin-top: 35px;
+    }
+
+    .apropos p {
+        margin-left: 18%;
+        width: 350px;
+        font-size: 16px;
+        line-height: 25px;
+        margin-top: 10px;
+    }
+
+    .apropos h1 {
+        margin-left: 18%;
+        margin-top: 15px;
+        font-size: 45px;
+    }
+    
+    hr {
+        margin-top: 350px;
+    }
+
+    .nous-joindre {
+        font-size: 45px;
+    }
+
+    .informations p {
+        font-size: 16px;
+    }
+
+    .flex-item3 {
+        order: 4;
+    }
+
+    .flex-item4 {
+        order: 3;
+    }
+
+    .flex-item5 {
+        order: 5;
+    }
+
+    .flex-item6 {
+        order: 6;
+    }
+
+    footer p {
+        padding-top: -4px;
+        font-size: 8px;
+    }
+
+
+}
+
+
